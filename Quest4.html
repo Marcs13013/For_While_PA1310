@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        form.normal {
+            font-size: 17px;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,10 +24,31 @@
         <script>
 
             let jog1 = Number(prompt("Escolha um número de 1 a 10"))
-            let jog2 = 0;
-            retorno = '';
+            if (!isNaN(jog1) && Number.isInteger(parseFloat(jog1))) {
+            } else {
+                jog1 = Number(prompt("Por favor, digite um número inteiro de 1 a 10."));
+            }
+
+
+            let contador = 1
+
+            while (jog1 > 10 || jog1 < 1) {
+                jog1 = Number(prompt("Escolha um número que não seja maior que 10 ou menos que 1"))
+            }
+
+            let Jog2 = Number(prompt('Agora o jogador 2 deve tentar acertar o número escolhido pelo jogar 1'));
+
+            while (jog1 != Jog2) {
+                Jog2 = Number(prompt("Você errou o número, tente outro"))
+                contador = contador + 1
+            }
+            if (jog1 == Jog2) {
+                retorno = "O número escolhido pelo jogador 1 era: " + jog1 + "</br></br>" + "O jogador 2 precisou de: " + contador + " tentativas para acertar";
+
+            }
 
             document.getElementById("retorno").innerHTML = retorno;
+
 
 
 
