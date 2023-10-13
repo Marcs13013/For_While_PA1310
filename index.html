@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style> body {
+        background-color: aliceblue;
+    }</style>
 </head>
 <body>
 
@@ -11,12 +14,15 @@
 
 <h1> Frações Sequenciais </h1>
 
-<font size="9" id="retorno"></font>
+<font size="5" id="retorno1"></font>
+<font size="5" id="retorno"></font>
 
 <script>
+let Num = 1
 
+document.getElementById("retorno1").innerHTML = Num + "</br>";
 
-for (let Num = 1; Num < 21; Num++) {
+for (Num; Num < 21; Num++) {
     document.getElementById("retorno").innerHTML += "1 / " + Num + "</br>";
     
 }

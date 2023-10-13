@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style> body {
+        background-color: aliceblue;
+    }</style>
 </head>
 
 <body>
@@ -13,21 +16,20 @@
 
         <h1> Número Pares de 1 a 100 </h1>
 
-        <font size="9"  id="retorno"></font>
+        <font size="5" id="retorno"></font>
 
         <script>
+            let Num = 100
+            /*while (Num > 0) {
+                document.getElementById("retorno").innerHTML += Num + "<br>";
+                Num = Num - 2
+            }*/
 
-            let Num = 1;
+            do {
+                document.getElementById("retorno").innerHTML += Num + "<br>";
+                Num = Num - 2
+            } while (Num > 0);
 
-            
-                for (Num; Num < 101; Num++) {
-                    if (Num % 2 == 0) {
-                    document.getElementById("retorno").innerHTML += Num + "<br>";
-
-                }
-
-
-            }
 
         </script>
 
